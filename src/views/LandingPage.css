@@ -1,0 +1,81 @@
+.landing-page-background {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*
+    * Created with https://www.css-gradient.com
+    * Gradient link: https://www.css-gradient.com/?c1=73c2cd&c2=fdb763&gt=r&gd=dtt
+    */
+    background: #73C2CD;
+    background: radial-gradient(at center top, #73C2CD, #FDB763);
+}
+
+.landing-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px
+}
+
+.landing-page-left {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    row-gap: 30px;
+}
+
+.landing-page-right {
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+    row-gap: 30px;
+}
+
+.let-them-cook-title {
+    font-family: 'Caveat';
+    font-size: 32px;
+    margin-bottom: -30px;
+
+}
+
+.select-instructions {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.submit-container {
+    display: flex;
+    /* grid-template-columns: 1fr 1fr; */
+    align-items: center;
+    justify-content: center;    
+}
+
+         
+.btn-grad {
+    background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+
+    width: 50%;
+    height: 50%;
+    align-self: center;
+  }
+
+  .btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+ 
