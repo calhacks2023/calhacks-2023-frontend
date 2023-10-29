@@ -1,3 +1,4 @@
+import Ingredient from '../components/Ingredient';
 import './NewRecipe.css'
 import { useNavigate } from 'react-router'
 
@@ -19,6 +20,24 @@ function NewRecipe() {
 
                 <div className='recipe-component-container'>
                     <div className='recipe-component-heading'>
+                        <h2>Ingredients</h2>
+                        <p>Substituted ingredients are highlighted in yellow!</p>
+                    </div>
+
+                    <div className='recipe-component-box'>
+                        <div className='ingredients'>
+                        <Ingredient ingredient={'egg'} />
+                        <Ingredient ingredient={'ur mom'} highlight/>
+                        <Ingredient ingredient={'egg'} />
+                        <Ingredient ingredient={'ur mom'} highlight/>
+                        <Ingredient ingredient={'egg'} />
+                        <Ingredient ingredient={'ur mom'} highlight/>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='recipe-component-container'>
+                    <div className='recipe-component-heading'>
                         <h2>Chef Notes</h2>
                         <p>How can you expect this recipe to differ from the original?</p>
                     </div>
@@ -27,17 +46,6 @@ function NewRecipe() {
                         <p className='chef-notes-text'>
                             TO BE COMPLETED
                         </p>
-                    </div>
-                </div>
-
-
-                <div className='recipe-component-container'>
-                    <div className='recipe-component-heading'>
-                        <h2>Ingredients</h2>
-                        <p>Mouse over your substitutions to learn more</p>
-                    </div>
-
-                    <div className='recipe-component-box'>
                     </div>
                 </div>
 

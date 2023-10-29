@@ -6,6 +6,8 @@
     justify-self: center;
 
     margin: auto;
+    flex-wrap: wrap;
+    padding: 50px;
 }
 
 .new-recipe-header {
@@ -34,17 +36,22 @@
 
 .recipe-component-box {
     width: 600px;
-    min-height: 200px;
+    min-height: 150px;
     background-color: ivory;
     opacity: 0.75;
     /* Make the box ivory colored and have a border + shadow */
 
     border-radius: 10px;
+    padding: 20px;
 }
 
+.ingredients {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
 
 .chef-notes-text {
-    margin: 15px;
     font-size: 18px;
 }
 
