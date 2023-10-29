@@ -25,7 +25,7 @@ function LoadingPage(props) {
 
         console.log(requestOptions)
 
-        fetch('http://127.0.0.1:8000/submitrecipe', requestOptions)
+        fetch('https://calhacks-2023-backend.onrender.com/submitrecipe', requestOptions)
             .then(response => response.json())
             .then((data) => navigate('/new_recipe', { state: { ingredients: data.ingredients, changes: data.changes} }))
 
