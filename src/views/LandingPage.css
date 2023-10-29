@@ -16,6 +16,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    column-gap: 40px;
     /* grid-template-columns: 1fr 1fr; */
 }
 
@@ -33,7 +34,8 @@
 
     padding: 20px;
     row-gap: 30px;
-    width: 600px;
+    width: 550px;
+    max-height: 545px;
 }
 
 .let-them-cook-title {
@@ -58,7 +60,7 @@
 }
 
          
-.btn-grad {
+.btn-grad-landing-page {
     background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%);
     margin: 10px;
     padding: 15px 45px;
@@ -105,7 +107,7 @@
         max-width: 90vw;
     }
 
-    .btn-grad {
+    .btn-grad-landing-page {
         background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%);
         margin: 10px;
         padding: 15px 45px;

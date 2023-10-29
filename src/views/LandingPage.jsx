@@ -46,9 +46,6 @@ function LandingPage() {
     }
   }
 
-
-
-
   return (
     <div className='landing-page-background'>
       <div className='landing-page'>
@@ -61,13 +58,13 @@ function LandingPage() {
             <br></br> <br></br> First, select the ingredients you would like to avoid. Then, our state-of-the art AI will consult its vast knowledge base to pick the tastiest replacements for your allergies!
           </p>
 
-          <Step stepNumber={1} stepText={'Select the ingredients you want to avoid'} />
+          <Step stepNumber={1} stepText={'Select ingredients you want to avoid'} />
           <CreatableSelect isMulti options={restrictions} onChange={handleRestrictionChange} />
           <p className='select-instructions'>Don’t see your specific restriction? Feel free to add your own to the list!</p>
         </div>
 
         <div className='landing-page-right'>
-          <Step stepNumber={2} stepText={'Copy and paste your recipe'} />
+          <Step stepNumber={2} stepText={'Copy and paste your recipe\'s ingredients'} />
           <Editor
             apiKey='qjo9ralclug0yalgrt7h00gv6obgyva2a2qdge2bfishns3b'
             onInit={(evt, editor) => editorRef.current = editor}
@@ -79,8 +76,8 @@ function LandingPage() {
             }}
           />
           <div className='submit-container'>
-            <Step stepNumber={3} stepText={'Hit the button to get your new recipe!'} />
-            <button className='btn-grad' onClick={letThemCook}>
+            <Step stepNumber={3} stepText={'Get your modified recipe!'} />
+            <button className='btn-grad-landing-page' onClick={letThemCook}>
               Let Them Cook!
             </button>
           </div>
