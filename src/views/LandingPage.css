@@ -17,7 +17,6 @@
     flex-wrap: wrap;
     flex-direction: row;
     /* grid-template-columns: 1fr 1fr; */
-    padding: 20px
 }
 
 .landing-page-left {
