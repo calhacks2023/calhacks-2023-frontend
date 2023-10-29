@@ -74,9 +74,9 @@ function LandingPage() {
             init={{
               menubar: false,
               statusbar: false,
-              toolbar: false
+              toolbar: false,
+              placeholder: "Recipe goes here..."
             }}
-            initialValue="Recipe goes here..."
           />
           <div className='submit-container'>
             <Step stepNumber={3} stepText={'Hit the button to get your new recipe!'} />
