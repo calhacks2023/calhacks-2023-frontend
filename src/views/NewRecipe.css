@@ -79,3 +79,52 @@
     color: #fff;
     text-decoration: none;
   }
+
+
+@media screen and (max-width: 600px) {
+
+    .new-recipe-container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        align-self: center;
+        justify-self: center;
+
+        margin: auto;
+        flex-wrap: wrap;
+    }
+    
+    .recipe-component-heading {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+    }
+
+    .recipe-component-box {
+        max-width: 250px;
+        min-height: 50px;
+        background-color: ivory;
+        opacity: 0.75;
+        /* Make the box ivory colored and have a border + shadow */
+    
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+
+    .btn-grad {
+        background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%);
+        margin: 10px;
+        padding: 15px 45px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;            
+        box-shadow: 0 0 20px #eee;
+        border-radius: 10px;
+        display: block;
+    
+        width: 80%;
+        height: 40%;
+        align-self: center;
+    }
