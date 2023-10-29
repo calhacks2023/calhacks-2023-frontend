@@ -66,6 +66,19 @@ function NewRecipe() {
                     Try Another Recipe
                 </button>
 
+                <div className="recipe-component-container">
+                    <div className="recipe-component-heading">
+                        <h2>Another Chef Special</h2>
+                        <p>Here's a similar recipe from our database!</p>
+                    </div>
+                    
+                    <div className="recipe-component-box">
+                        <p className="chef-notes-text">
+                            {state.newRecipe}
+                        </p>
+                    </div>
+                </div>
+
             </div>
 
         </>
