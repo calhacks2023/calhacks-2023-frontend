@@ -69,10 +69,12 @@ function LandingPage() {
             apiKey='qjo9ralclug0yalgrt7h00gv6obgyva2a2qdge2bfishns3b'
             onInit={(evt, editor) => editorRef.current = editor}
             init={{
+              plugins: 'powerpaste tinymcespellchecker wordcount fullscreen lists advlist',
               menubar: false,
               statusbar: false,
-              toolbar: false,
-              placeholder: "Recipe goes here..."
+              selector: 'textarea',
+              toolbar: 'fullscreen wordcount autoresize restoredraft lists numlist bullist',
+              placeholder: "Recipe goes here...",
             }}
           />
           <div className='submit-container'>
