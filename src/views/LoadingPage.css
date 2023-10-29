@@ -1,0 +1,20 @@
+.loading-page-container {
+    height: 100vh;
+    width: 100vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    row-gap: 40px;
+}
+
+.hang-tight {
+    font-family: 'Caveat', 'cursive';
+    font-size: 36px;
+}
+
+.loading-description {
+    font-size: 24px;
+    text-align: center;
+}

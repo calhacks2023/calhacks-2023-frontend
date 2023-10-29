@@ -14,7 +14,18 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  overflow-x: hidden
+  overflow-x: hidden;
+
+    /*
+  * Created with https://www.css-gradient.com
+  * Gradient link: https://www.css-gradient.com/?c1=73c2cd&c2=fdb763&gt=r&gd=dtt
+  */
+  background: #73C2CD;
+  background: radial-gradient(at center top, #73C2CD, #FDB763);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
