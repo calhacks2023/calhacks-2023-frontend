@@ -1,10 +1,9 @@
 .landing-page-background {
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-
     /*
     * Created with https://www.css-gradient.com
     * Gradient link: https://www.css-gradient.com/?c1=73c2cd&c2=fdb763&gt=r&gd=dtt
@@ -14,8 +13,10 @@
 }
 
 .landing-page {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* grid-template-columns: 1fr 1fr; */
     padding: 20px
 }
 
@@ -24,6 +25,7 @@
     flex-direction: column;
     padding: 20px;
     row-gap: 30px;
+    max-width: 650px;
 }
 
 .landing-page-right {
@@ -32,13 +34,13 @@
 
     padding: 20px;
     row-gap: 30px;
+    width: 650px;
 }
 
 .let-them-cook-title {
     font-family: 'Caveat';
     font-size: 32px;
     margin-bottom: -30px;
-
 }
 
 .select-instructions {
@@ -49,9 +51,11 @@
 
 .submit-container {
     display: flex;
+    flex-wrap: wrap;
     /* grid-template-columns: 1fr 1fr; */
     align-items: center;
-    justify-content: center;    
+    justify-content: center;
+    row-gap: 20px;
 }
 
          
@@ -71,7 +75,7 @@
     width: 50%;
     height: 50%;
     align-self: center;
-  }
+}
 
   .btn-grad:hover {
     background-position: right center; /* change the direction of the change here */
@@ -79,3 +83,46 @@
     text-decoration: none;
   }
  
+
+@media screen and (max-width: 600px) {
+
+    .let-them-cook-title {
+        font-family: 'Caveat';
+        font-size: 32px;
+        margin-bottom: -10px;
+    }
+
+    .landing-page-left {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        max-width: 90;
+    }
+    
+    .landing-page-right {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        max-width: 90vw;
+    }
+
+    .btn-grad {
+        background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%);
+        margin: 10px;
+        padding: 15px 45px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;            
+        box-shadow: 0 0 20px #eee;
+        border-radius: 10px;
+        display: block;
+
+        font-size: 18px;
+    
+        width: 100%;
+        height: 40%;
+        align-self: center;
+    }
+}

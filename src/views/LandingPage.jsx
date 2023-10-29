@@ -30,7 +30,7 @@ function LandingPage() {
             <br></br> <br></br> First, select the ingredients you would like to avoid. Then, our state-of-the art AI will consult its vast knowledge base to pick the tastiest replacements for your allergies!
           </p>
 
-          <Step stepNumber={1} stepText={'Select the ingredients you’d like to avoid'} />
+          <Step stepNumber={1} stepText={'Select the ingredients you want to avoid'} />
           <CreatableSelect isMulti options={restrictions} />
           <p className='select-instructions'>Don’t see your specific restriction? Feel free to add your own to the list!</p>
         </div>
