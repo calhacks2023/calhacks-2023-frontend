@@ -1,14 +1,32 @@
 import Ingredient from '../components/Ingredient';
 import './NewRecipe.css'
-import { useNavigate } from 'react-router'
+import { useNavigate, useLocation } from 'react-router'
 
 function NewRecipe() {
 
     const navigate = useNavigate();
+    const { state } = useLocation();
+
+    console.log("New Recipe")
+    console.log(state.ingredients)
+    console.log(state.changes)
 
     function goToPrompt() {
         navigate('/')
     }
+
+    const generateIngredients = (ingredientString) => {
+        const ingredientsArray = ingredientString.split(',').map((ingredient, index) => {
+          const isHighlighted = ingredient.trim().startsWith('*');
+          const ingredientText = isHighlighted ? ingredient.slice(1).trim() : ingredient.trim();
+          return (
+            <Ingredient ingredient={ingredientText} highlight={isHighlighted} />
+          );
+        });
+      
+        return ingredientsArray;
+    }
+
 
     return (
         <>
@@ -26,12 +44,7 @@ function NewRecipe() {
 
                     <div className='recipe-component-box'>
                         <div className='ingredients'>
-                        <Ingredient ingredient={'egg'} />
-                        <Ingredient ingredient={'ur mom'} highlight/>
-                        <Ingredient ingredient={'egg'} />
-                        <Ingredient ingredient={'ur mom'} highlight/>
-                        <Ingredient ingredient={'egg'} />
-                        <Ingredient ingredient={'ur mom'} highlight/>
+                        { generateIngredients(state.ingredients) }
                         </div>
                     </div>
                 </div>
@@ -44,7 +57,7 @@ function NewRecipe() {
 
                     <div className='recipe-component-box'>
                         <p className='chef-notes-text'>
-                            TO BE COMPLETED
+                            {state.changes}
                         </p>
                     </div>
                 </div>
