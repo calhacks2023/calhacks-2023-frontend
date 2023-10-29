@@ -4,6 +4,8 @@ import Step from '../components/Step'
 import CreatableSelect from 'react-select/creatable'
 import { Editor } from '@tinymce/tinymce-react'
 
+import { useNavigate } from 'react-router-dom';
+
 const restrictions = [
   { value: 'egg', label: 'egg', color: 'black' },
   { value: 'dairy', label: 'dairy', color: 'black' },
@@ -12,11 +14,24 @@ const restrictions = [
 
 function LandingPage() {
   const editorRef = useRef(null);
+  const navigate = useNavigate();
+  const [selectedRestrictions, setSelectedRestrictions] = useState([]);
+
+  const handleRestrictionChange = (restrictions) => {
+    setSelectedRestrictions(restrictions);
+  };
+
   const log = () => {
+
+    
     if (editorRef.current) {
-      console.log(editorRef.current.getContent());
+      console.log(editorRef.current.getContent())
+      console.log(selectedRestrictions)
+      navigate('/loading', { state: { data: editorRef.current.getContent({ format: "text" })} })
     }
   };
+
+  
 
   return (
     <div className='landing-page-background'>
@@ -31,7 +46,7 @@ function LandingPage() {
           </p>
 
           <Step stepNumber={1} stepText={'Select the ingredients you want to avoid'} />
-          <CreatableSelect isMulti options={restrictions} />
+          <CreatableSelect isMulti options={restrictions} onChange={handleRestrictionChange} />
           <p className='select-instructions'>Don’t see your specific restriction? Feel free to add your own to the list!</p>
         </div>
 
