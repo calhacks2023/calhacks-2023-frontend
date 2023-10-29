@@ -9,7 +9,13 @@ import { useNavigate } from 'react-router-dom';
 const restrictions = [
   { value: 'egg', label: 'egg', color: 'black' },
   { value: 'dairy', label: 'dairy', color: 'black' },
-
+  {'value': 'soy', 'label': 'soy', color: 'black'},
+  {'value': 'sesame', 'label': 'sesame', color: 'black'},
+  {'value': 'shellfish', 'label': 'shellfish', color: 'black'},
+  {'value': 'fish', 'label': 'fish', color: 'black'},
+  {'value': 'tree nuts', 'label': 'tree nuts', color: 'black'},
+  {'value': 'peanuts', 'label': 'peanuts', color: 'black'},
+  {'value': 'wheat', 'label': 'wheat', color: 'black'}
 ];
 
 function LandingPage() {
